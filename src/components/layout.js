@@ -11,7 +11,10 @@ import { StaticQuery, graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
 import Header from "./header"
-import Navbar from "./navBar"
+import Navbar from "./navBar" // NavBar the component, not the bootstrap element
+import Footer from "./footer"
+
+import TestButton from "./menu"
 
 const Layout = ({ children, pageInfo }) => (
   <StaticQuery
@@ -20,6 +23,7 @@ const Layout = ({ children, pageInfo }) => (
         site {
           siteMetadata {
             title
+            about
           }
         }
       }
@@ -36,12 +40,14 @@ const Layout = ({ children, pageInfo }) => (
           <Row noGutters>
             <Col>
               <Container className="mt-5">
-                <main>{children}</main>
+                <main>{children} What</main>
+                <TestButton/>
               </Container>
             </Col>
           </Row>
         </Container>
-        <Container fluid className="px-0">
+        <Footer /* aboutInfo ={data.site.siteMetadata.about} */   />
+        {/* <Container fluid className="px-0">
           <Row noGutters>
             <Col className="footer-col">
               <footer>
@@ -53,7 +59,7 @@ const Layout = ({ children, pageInfo }) => (
               </footer>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
       </>
     )}
   />

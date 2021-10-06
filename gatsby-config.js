@@ -1,8 +1,9 @@
 module.exports = {
   pathPrefix: "/gatsby-react-bootstrap-starter",
   siteMetadata: {
-    title: `Gatsby React Bootstrap Starter`,
+    title: `myQtown`,
     description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
+    about: 'This is just a song I wrote.',
     author: `Billy Jacoby`,
   },
   plugins: [
@@ -14,9 +15,18 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `about`,
+        path: `${__dirname}/content/about`,
+      },
+    },
+
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    'gatsby-transformer-remark', //installed and then added to this file
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,6 +36,7 @@ module.exports = {
         background_color: `#20232a`,
         theme_color: `#20232a`,
         display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, 
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

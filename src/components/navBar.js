@@ -5,7 +5,7 @@ import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
 
 const CustomNavbar = ({ pageInfo }) => {
   console.log(pageInfo)
-  return (
+  return ( //*Below need to be redered to a viratual DOM hence return. Navbar etc ...arow now a react components//
     <>
       <Navbar variant="dark" expand="lg" id="site-navbar">
         {/* <Container> */}

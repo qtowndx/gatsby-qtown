@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => (  //No need for a return because it's just Javascript below 
   <header
     style={{
       background: `#20232a`,
@@ -39,3 +39,5 @@ Header.defaultProps = {
 }
 
 export default Header
+
+//Why does Header gave no return

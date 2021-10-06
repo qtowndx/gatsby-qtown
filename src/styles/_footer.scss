@@ -1,0 +1,39 @@
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    footer {
+      display: flex;
+      position: relative;
+      bottom: 0;
+      margin-top: -200px; //-60px
+      height: 200px;  //60px
+      clear: both;
+      background-color: $color-primary;
+      color: rgb(190, 165, 165);
+      justify-content: center;
+      width: 100%;
+  
+      span {
+        align-self: center;
+        text-align: center;
+      }
+    }
+  }
+  
+  .footer-wrapper{
+    display: flex;
+      position: relative;
+      bottom: 0;
+      margin-top: -250px; //-60px
+      height: 250px;  //60px
+      clear: both;
+      background-color: $color-footer;
+      color: rgb(247, 240, 240);
+      justify-content: center;
+      width: 100%;
+  }
+  
+  
